@@ -1,0 +1,436 @@
+.main {
+    padding: 0;
+    margin: 0;
+}
+
+.platinum_member {
+    position: relative;
+}
+
+#platinum,
+#member {
+    position: relative;
+    bottom: 0;
+    opacity: 0;
+    animation: slide-up 5s forwards;
+}
+
+@keyframes slide-up {
+    0% {
+        bottom: -50px;
+        opacity: 0;
+    }
+
+    100% {
+        bottom: 0;
+        opacity: 1;
+    }
+}
+
+.top {
+    background-image: url("images/bg.jpg");
+    background-size: cover;
+    /* or background-size: contain; */
+    background-position: center;
+    /* Adjust the value as needed */
+    animation: zoomBackground 20s infinite alternate;
+    background-repeat: no-repeat;
+    background-color: #060407;
+    background-position-y: 46px;
+}
+
+@keyframes zoomBackground {
+    0% {
+        background-size: 100%;
+    }
+
+    100% {
+        background-size: 120%;
+    }
+}
+
+.top {
+    width: 100%;
+    height: 750px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    z-index: 0;
+}
+
+/* Style for normal state */
+.nav-link {
+    display: inline-block;
+    position: relative;
+    color: whitesmoke;
+    font-size: 18px;
+    text-decoration: none;
+    /* Remove default underline */
+}
+
+/* Style for hover state */
+.nav-link:hover {
+    color: #14a6dc;
+}
+
+/* Style for the underline effect */
+.nav-link::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #14a6dc;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+
+/* Underline animation on hover */
+.nav-link:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+/* Style for active state */
+.nav-link.active {
+    color: white;
+}
+
+/* Blue underline for active state */
+.nav-link.active::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #14a6dc;
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+
+
+#platinum {
+    color: #14a6dc;
+    font-size: 150px;
+    font-weight: 700;
+}
+
+#member {
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: rgb(241, 232, 232);
+    color: #eef3f6;
+    font-size: 120px;
+    font-weight: 200;
+    color: rgba(0, 0, 0, 0.5);
+}
+
+/* Responsive adjustments */
+@media only screen and (max-width: 768px) {
+    #platinum {
+        font-size: 100px;
+        /* Adjusted font size for smaller screens */
+    }
+
+    #member {
+        font-size: 80px;
+        /* Adjusted font size for smaller screens */
+    }
+}
+
+@media only screen and (max-width: 576px) {
+    #platinum {
+        font-size: 80px;
+        /* Further adjusted font size for even smaller screens */
+    }
+
+    #member {
+        font-size: 60px;
+        /* Further adjusted font size for even smaller screens */
+    }
+}
+
+
+.new_member {
+    padding-left: 2%;
+    margin-bottom: 10%;
+}
+
+#membership {
+    border: 2px solid white;
+    background: transparent;
+    color: white;
+    padding-left: 1%;
+    padding-right: 1%;
+}
+
+#membership:hover {
+    background-color: #14a5d9;
+    ;
+}
+
+.icon {
+    justify-content: center;
+    border: 3px solid orange;
+    padding: 16px;
+    border-radius: 50%;
+    width: 120px;
+    height: 110px;
+    margin-top: 10%;
+    margin-left: 25%;
+}
+
+.box {
+    text-align: center;
+    background-color: rgb(255, 254, 254);
+    border: 1px solid rgb(243, 240, 240);
+    border-radius: 2px;
+    margin: 18px;
+    padding: 26px;
+    box-shadow: 4px 8px 8px rgba(168, 160, 145, 0.1);
+    overflow: hidden;
+    /* Hide overflow content */
+}
+
+.head {
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    padding-bottom: 8%;
+}
+
+.box_rw {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.our_training {
+    font-size: 100px;
+    text-decoration-line: underline;
+    text-decoration-color: orange;
+    font-weight: 80px;
+    color: #01526F;
+    font-family: 'Serif'
+}
+
+.bar_nav_bg {
+    background: transparent !important;
+}
+
+li.nav-item {
+    text-align: end;
+
+}
+
+li.nav-item:last-child {
+    border-bottom: none;
+}
+
+.navbar-nav {
+    background: transparent;
+    float: inline-end;
+    padding: 1px;
+    margin-top: -48px;
+}
+
+a.nav-link {
+    color: #fff;
+}
+
+
+@media(max-width:600px) {
+    .box_rw .box {
+        margin: 10px auto;
+        width: 90%;
+    }
+
+    .our_training {
+        font-size: 45px;
+    }
+}
+
+@media(max-width:420px) {
+    #platinum {
+        font-size: 43px;
+    }
+}
+
+
+.row {
+    justify-content: center;
+    display: flex;
+}
+
+.col-lg-6 {
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    padding: 20px;
+    /* Adjust padding value as needed */
+}
+
+.col-lg-6:hover {
+    transform: scale(1.1);
+}
+
+.col-lg-6 img {
+    width: 100%;
+    height: auto;
+}
+
+.col-lg-6 .content {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    color: white;
+    z-index: 1;
+}
+
+.navbar-toggler {
+    background-color: RED
+}
+
+/*fOOTER CSS */
+@media screen and (max-width: 768px) {
+
+    /* Adjustments for smaller screens */
+    .col a {
+        flex: 100%;
+        /* Full width for smaller screens */
+        margin-bottom: 8px;
+        /* Add some space between rows */
+    }
+
+    /* Adjust font size for smaller screens */
+    .col a div {
+        font-size: 20px;
+    }
+}
+
+.star {
+    color: orange;
+    text-align: center;
+    font-size: 30px;
+    /* Adjust font size for mobile screens */
+}
+
+.box_star {
+    border: 2px solid #14a6dc;
+    border-radius: 10px;
+    padding: 3%;
+    /* Adjust padding for mobile screens */
+    margin: 2%;
+    /* Adjust margin for mobile screens */
+}
+
+.heading {
+    color: white;
+    font-size: 20px;
+    /* Adjust font size for mobile screens */
+    text-align: center;
+}
+
+.des {
+    padding-top: 3%;
+    color: white;
+    font-size: 14px;
+    /* Adjust font size for mobile screens */
+    text-align: center;
+}
+
+/* Media query for mobile screens */
+@media screen and (max-width: 576px) {
+    .star {
+        font-size: 20px;
+        /* Adjust font size for smaller screens */
+    }
+
+    .box_star {
+        padding: 2%;
+        /* Adjust padding for smaller screens */
+        margin: 1%;
+        /* Adjust margin for smaller screens */
+    }
+
+    .heading {
+        font-size: 16px;
+        /* Adjust font size for smaller screens */
+    }
+
+    .des {
+        font-size: 12px;
+        /* Adjust font size for smaller screens */
+    }
+}
+
+.in1>img {
+    width: 8vw;
+    height: 16vh;
+    border-radius: 50%;
+}
+
+.b {
+    background-color: #fbf8f8;
+}
+
+.reviews {
+    border-radius: 2%;
+    padding: 1%;
+    margin: 2%;
+    font-weight: 60;
+    font-style: oblique;
+    background-color: rgb(255, 255, 255);
+    font-size: large;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+}
+
+.in1 img {
+    transition: transform 0.6s ease;
+    /* Smooth transition for the zoom effect */
+    width: 15%;
+    /* Ensure the image takes up the full width of its container */
+}
+
+.reviews:hover .in1>img {
+    transform: scale(1.2);
+    /* Scale the image to 1.2 times its original size */
+}
+
+.sticky {
+    background-image: url('images/trade.avif');
+    background-size: cover;
+    height: 350px;
+    z-index: 0.5;
+}
+
+.bt {
+    color: white;
+    background-color: red;
+    border: none;
+    border-radius: 10%;
+    padding: 2%;
+    text-decoration: none;
+}
+
+.footer {
+    background-color: #232025;
+    margin-top: -2%;
+    padding-bottom: 3%;
+
+}
+
+.title {
+    color: white;
+    font-size: 30px;
+}
+
+.c {
+    color: white;
+    font-weight: 60;
+}
+.pic{
+    padding-bottom: 35px;
+}
