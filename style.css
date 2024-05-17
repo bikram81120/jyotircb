@@ -366,11 +366,22 @@ a.nav-link {
     }
 }
 
-.in1>img {
+/* Default styles for larger screens */
+.in1 > img {
     width: 8vw;
     height: 16vh;
     border-radius: 50%;
 }
+
+/* Styles for mobile screens */
+@media (max-width: 768px) {
+    .in1 > img {
+        width: 16vw; /* Adjusted to maintain aspect ratio for smaller screens */
+        height: 16vw; /* Same value for width and height */
+        border-radius: 50%;
+    }
+}
+
 
 .b {
     background-color: #fbf8f8;
